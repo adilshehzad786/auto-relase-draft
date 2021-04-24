@@ -8,17 +8,17 @@ on:
 jobs:
  test: 
   name: Test
-  runs-on: ${{matrix.os}}
-    strategy:
-      matrix:
-        os: [windows-latest,ubuntu-latest]
+  runs-on: ${{ matrix.os }}
+  strategy:
+     matrix:
+       os: [windows-latest,ubuntu-latest]
 
-    steps:
+  steps:
       - name: Get the Source
         uses: actions/checkout@v1
       - name: Create a release draft for the version tag
         id: create-release-draft
-        uses: ./
+  
       - name: Print the URL of the release draft
         run: echo ${{steps.create-release-draft.outputs.release-url}}
 
