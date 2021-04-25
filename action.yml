@@ -1,11 +1,10 @@
-name: 'Your name here'
+name: 'Adil Shehzad'
 description: 'Provide a description here'
-author: 'Your name or organization here'
-inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+author: 'Adil Shehzad'
+
+output:
+  release-url:
+    descriptions: 'The Url of the Github'
 runs:
   using: 'node12'
   main: 'dist/index.js'

@@ -9,5 +9,8 @@ describe('When running the action',()=>{
   test('it should set the release-url output parameter',async()=>{
   await run()
 
+  expect(fakeSetOutput).toHaveBeenCalledWith('release-url',expect.anything())
+  
+
   })
 })
