@@ -1,5 +1,6 @@
 import * as core from '@actions/core'
-import { run } from '../src/main'
+
+import { run } from '../src/main';
 
 jest.mock('@actions/core')
 
@@ -10,7 +11,7 @@ describe('When running the action',()=>{
   await run()
 
   expect(fakeSetOutput).toHaveBeenCalledWith('release-url',expect.anything())
-  
+
 
   })
 })
